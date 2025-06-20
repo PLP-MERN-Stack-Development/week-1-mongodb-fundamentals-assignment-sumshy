@@ -1,10 +1,8 @@
+require("dotenv").config();
+
 const { MongoClient } = require("mongodb");
 
-// === CONFIGURATION ===
-// Replace with your actual MongoDB Atlas connection string
-const uri = "mongodb+srv://sumayaabdul:sumayaNEWsecurePass2025@plpcluster0.owjen20.mongodb.net/plp_bookstore?retryWrites=true&w=majority";
-
-
+const uri = process.env.MONGODB_URI;
 
 // Database and Collection names
 const dbName = "plp_bookstore";
